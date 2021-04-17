@@ -1,0 +1,33 @@
+# Please do not touch, used for updating configs.
+confVersion: 1
+
+########################
+#   General Settings   #
+########################
+General:
+  # Enables extra debug messages
+  debugMode: false
+
+  # How often should ccShop save it's data, in ticks.
+  # Default is 3600 ticks (3 minutes)
+  saveInterval: 3600
+
+########################
+# Player Shop Settings #
+########################
+# Controls the player shops feature.
+# Additional options can be found in limits.yml
+PlayerShops:
+  # Enables/Disables the player shop features.
+  enable: true
+
+  # How many Transaction logs should we save
+  transactionLogSize: 32
+
+########################
+# Admin Shop Settings  #
+########################
+# Admin shops are not yet implemented.
+# This section is a placeholder.
+AdminShops: {}
+

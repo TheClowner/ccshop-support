@@ -1,0 +1,61 @@
+########################
+# ccShop Limits Config #
+########################
+
+# Please do not change!
+ConfVersion: 1
+
+##################
+# General Limits #
+##################
+General:
+  Distance:
+    # The maximum distance, squared, for a container or sign
+    # from the first sign linked to a shop.
+    # Default is 256.0 (16 blocks radius).
+    # DO NOT set these above your server's View Distance * 16!
+    containerSquared: 256.0
+    signSquared: 256.0
+  Quantity:
+    # Maximum number of containers (eg Chests) linked to a single player shop.
+    # Use -1 for unlimited.
+    containersPerShop: 3
+    # Maximum items added to one shop.
+    # Use -1 for unlimited.
+    itemsPerShop: 5
+    # Maximum number of signs linked to one shop.
+    # Use -1 for unlimited.
+    signsPerShop: 1
+    # Maxmum number of shops per player.
+    # Use -1 for unlimited.
+    shopsPerPlayer: -1
+
+#####################
+# Item Price Limits #
+#####################
+ItemPrice:
+  # Maximum & Minimum prices to buy or sell from a player shop
+  # Enter each item on a new line, using spigot material names
+  # https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html
+  # Use 'Maximum: {}' if you don't want any min/max prices
+  # Eg.
+  # Maximum:
+  #   DIAMOND: 1000.0
+  #   COAL: 50.0
+  Buy:
+    Maximum: {}
+    Minimum: {}
+  Sell:
+    Maximum: {}
+    Minimum: {}
+
+#####################
+# Blocked Materials #
+#####################
+# Any material name listed here will
+# not be able to be sold in a player shop.
+# Enter each on new line, using spigot material names
+# https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html
+BlockedMaterials:
+  - SPAWNER
+  - PLAYER_HEAD

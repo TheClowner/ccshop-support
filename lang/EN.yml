@@ -1,0 +1,109 @@
+# ccShop Default English Language File
+#TODO make sure this is up to date!
+confVersion: 0
+
+# General/Misc Messages
+General:
+  Economy:
+    currency_prefix: "\\$"
+    currency_suffix: ""
+  dateFormat: "HH:mm z 'on' dd MMM, yyyy"
+
+# Chat messages
+Clickable:
+  addTrusted: "§a» §nClick Here, then type the name of the player to trust. §a«"
+
+Commands:
+  General:
+    errorPrefix: "§4ccShop Error » §c"
+    normalPrefix: "§b§lccShop » §9"
+    Error:
+      playerOnly: "This command only works for players!"
+      shopIDInvalid: "ShopID must be a number!"
+      shopNotExist: "Shop #{ID} does not exist!"
+      hasNoShops: "You don't have any shops! Create one by putting §7[shop] §con a sign."
+      playerMissing: "You must enter a player's name."
+      playerNotFound: "Player {name} was not found!"
+  Player:
+    help: "§b§lHelp\n
+          §1§m            §9  §lCreating Shops  §1§m            \n
+          §9Create a shop by placing a sign near a chest/barrel/shulker\n
+          §9Line 1: §7[shop] §9§oAll other lines are optional.\n
+          §9Line 2: §7Item Name §9or §7auto §9§o(uses chest contents).\n
+          §9Line 3: §7price each §9§oYou can change this later.\n
+          §9Line 4: §7buy §9or §7sell §9You can change this later.\n
+          §0 \n
+          §1§m            §9  §lShop Commands  §1§m            \n
+          §9Aliases: §7/ccshop /shop /shops \n
+          §7/ccshop manage §1- §9Open the shop manager GUI.\n
+          §7/ccshop manage §8<§7ShopID§8> §1- §9Open manager for a single shop.\n
+          §7/ccshop manage §8<§7ShopID§8> <§7open§8|§7close§8> §1- §9Open/close a shop.\n
+          §7/ccshop manage §8<§7ShopID§8> <§7trust§8|§7untrust§8> <§7name§8> §1- §9Allow others to access shop storage.\n
+          §7/ccshop stockcheck §1- §9Check stock for all your shops.\n
+          §1§m                                                                     §1"
+    Manage:
+      openShop: "Your Shop #{ID} is now open."
+      closeShop: "Your Shop #{ID} is now closed."
+      trustSuccess: "{name} is now trusted. They can access shop storage."
+      unTrustSuccess: "{name} is no longer trusted."
+      Chests:
+        pleaseClickChest: "Please RIGHT CLICK on the chest/container you would like to add or remove."
+        confirmChestRemoved: "Chest is no longer linked to your shop."
+        chestLinkedToOtherShop: "§cThat chest is already used by another shop!"
+        confirmChestAdded: "Chest is now linked to your shop."
+        chestFailMax: "§cYour shop already has the maximum number of chests connected."
+        chestFailDistance: "§cThat chest is too far away!"
+      Signs:
+        pleaseClickSign: "Please RIGHT CLICK on the sign you would like to add or remove."
+        confirmSignRemoved: "Sign is no longer linked to your shop."
+        signLinkedToOtherShop: "§cThat chest is already used by another shop!"
+        confirmSignAdded: "Sign is now linked to your shop."
+        signFailMax: "§cYour shop already has the maximum number of signs connected."
+        signFailDistance: "§cThat sign is too far away!"
+    Create:
+      success: "Shop {ID} created. Use §7/ccshop manage {ID} §9to manage your shop!"
+      Error:
+        noChest: "Shop {ID} couldn't find a chest! Please link one from the GUI."
+        noItem: "Item type not found - please setup in GUI."
+        itemBlocked: "Sorry, {MATERIAL} is banned from sale."
+
+# Sign formats
+Sign:
+  formats:
+    defaultPlayerFormat:
+    - "&l{owner}'s Shop"
+    - "Click to {buySell}"
+    - "&9&l{mainItem}"
+    - "&c{price}&8/ea"
+    defaultAdminFormat:
+    - "&lServer Shop"
+    - "Click to {buySell}"
+    - "&9&l{mainItem}"
+    - "&c{price}&8/ea"
+    deletedShopFormat:
+    - "&4**"
+    - "&c&lDeleted"
+    - "&c&lShop"
+    - "&4**"
+    closedShopFormat:
+    - "&4**"
+    - "&c&lShop"
+    - "&c&lClosed"
+    - "&4**"
+    removedSignFormat:
+    - "&4**"
+    - "&cRemoved"
+    - "&cShop Sign"
+    - "&4**"
+    limitReachec:
+    - "§4Error:"
+    - "§cShop Limit"
+    - "§cExceeded!"
+  createHeader:
+    player: "[shop]"
+    admin: "[adminshop]"
+    auto: "auto"
+    buy: "buy"
+    sell: "sell"
+
+GUI: #TODO

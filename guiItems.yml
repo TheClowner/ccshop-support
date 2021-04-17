@@ -1,0 +1,62 @@
+# Please do not change. Used to update configs in future versions.
+confVersion: 1
+
+##########################################################
+# PLEASE NOTE: Item names and lore are set per language. #
+# This file only allows you to change item materials!    #
+##########################################################
+# All options accept any spigot material name.
+# and must be in BLOCK CAPITALS.
+# https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html
+
+General:
+  # General Items, used across all GUIs
+  pageUp: ARROW
+  pageDown: ARROW
+  close: BARRIER
+  filler: BLACK_STAINED_GLASS_PANE
+
+  # Confirm Screen
+  Confirm:
+    confirm: LIME_STAINED_GLASS_PANE
+    cancel: RED_STAINED_GLASS_PANE
+
+# Player Shop GUIs
+PlayerShop:
+  # Customer GUIs.
+  Customer:
+    cantBuy: BARRIER
+    cantSell: BARRIER
+    balance: SUNFLOWER
+
+  # Shop Owner/Management GUIs
+  Manager:
+  # Main page - all shops
+    Main:
+      stockView: CHEST
+      defaultSignFormat: OAK_SIGN
+      toggleStockMsg: WRITABLE_BOOK
+      toggleTransMsg: WRITABLE_BOOK
+      defaultShopType: OAK_SIGN
+    # Single shop manager
+    Shop:
+      open: EMERALD
+      closed: REDSTONE
+      signText: OAK_SIGN
+      addRemSign: OAK_SIGN
+      addRemChest: CHEST
+      addItem: NETHER_STAR
+      manageTrusted: PLAYER_HEAD
+      openStats: PAPER
+      deleteShop: REDSTONE_BLOCK
+    # Single Item Manager
+    Item:
+      toggleFalse: REDSTONE
+      toggleTrue: EMERALD
+      buyPrice: GOLD_INGOT
+      sellPrice: IRON_INGOT
+      stats: PAPER
+      deleteItem: REDSTONE_BLOCK
+    # Trusted Player Manager
+    Trust:
+      addTrusted: NETHER_STAR

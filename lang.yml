@@ -1,0 +1,103 @@
+############################
+# ccShop Language Settings #
+############################
+
+# This file holds global language settings
+# Please edit files in /lang/ folder
+# for individual language translations.
+
+###
+# Please do not change this line, used to update configs
+confVersion: 1
+###
+
+# Settings for Multi-Language support #
+#######################################
+MultiLingual:
+  # Enable the multi-language support
+  # Allows players to select a language with: /ccshop setlang [Name]
+  # Or for an admin or console: /ccshopadm setlang [player] [name]
+  # If not enabled, all players are given the default language defined below.
+  enable: false
+
+  # A List of languages supported.
+  # A file is created for each in /lang/
+  supportedLanguages:
+  # ID: "Full Name"
+    EN: "English"
+
+  # The default language
+  # used when a player has not selected their language
+  # or if the MultiLingual feature is not enabled.
+  defaultLanguage: "EN"
+
+# General Messages #
+####################
+GeneralMessages:
+  # Currency style options
+  Currency:
+    # Prefix and suffix for currency.
+    # NOTE: If you use a currency symbol (eg $, £, etc) you need to escape it, eg \\$
+    prefix: "\\$"
+    suffix: ""
+    # The number of digits shown after a decimal place
+    # Set to 0 if your economy should only show integers.
+    decimalPlaces: 2
+
+  # The date format used in various UIs
+  # See https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html
+  dateFormat: "HH:mm z 'on' dd MMM, yyyy"
+
+# Sign text options #
+#####################
+SignMessages:
+  # Default formats for shop signs
+  # Placeholders: (only valid for playerShop/adminShop formats)
+  # {owner} - the shop's owner (playerShops only)
+  # {mainItem} - the name of the first item added to the shop
+  # {price} - the price each for the main item
+  # {priceS} - the price per stack for the main item
+  DefaultFormat:
+    playerShop:
+      - "&l{owner}'s Shop"
+      - "Click to {buySell}"
+      - "&9&l{item}"
+      - "&c{pe}&8/ea"
+    adminShop:
+      - "&lServer Shop"
+      - "Click to {buySell}"
+      - "&9&l{item}"
+      - "&c{pe}&8/ea"
+    deletedShop:
+      - "&4**"
+      - "&c&lDeleted"
+      - "&c&lShop"
+      - "&4**"
+    closedShop:
+      - "&4**"
+      - "&c&lShop"
+      - "&c&lClosed"
+      - "&4**"
+    deletedSign:
+      - "&4**"
+      - "&cRemoved"
+      - "&cShop Sign"
+      - "&4**"
+    maxShops:
+      - "&4Error:"
+      - "&cShop limit"
+      - "&cExceeded"
+      - ""
+  # Settings for creating a shop from a sign
+  ShopCreation:
+    # The header that has to go on the first line
+    playerHeader: "[shop]"
+    adminHeader: "[adminshop]"
+
+    # What to look for to auto-search for items
+    # instead of giving an item name
+    auto: "auto"
+
+    # What to use to set item mode, buy or sell
+    buy: "buy"
+    sell: "sell"
