@@ -1,109 +1,328 @@
 # ccShop Default English Language File
-#TODO make sure this is up to date!
-confVersion: 0
+confVersion: 2
 
-# General/Misc Messages
-General:
-  Economy:
-    currency_prefix: "\\$"
-    currency_suffix: ""
-  dateFormat: "HH:mm z 'on' dd MMM, yyyy"
+ChatMessages:
+  Clickable:
+    addTrusted: '&a» &nClick Here, then type the name of the player to trust. &a«'
 
-# Chat messages
-Clickable:
-  addTrusted: "§a» §nClick Here, then type the name of the player to trust. §a«"
-
-Commands:
-  General:
-    errorPrefix: "§4ccShop Error » §c"
-    normalPrefix: "§b§lccShop » §9"
-    Error:
-      playerOnly: "This command only works for players!"
-      shopIDInvalid: "ShopID must be a number!"
-      shopNotExist: "Shop #{ID} does not exist!"
-      hasNoShops: "You don't have any shops! Create one by putting §7[shop] §con a sign."
-      playerMissing: "You must enter a player's name."
-      playerNotFound: "Player {name} was not found!"
-  Player:
-    help: "§b§lHelp\n
-          §1§m            §9  §lCreating Shops  §1§m            \n
-          §9Create a shop by placing a sign near a chest/barrel/shulker\n
-          §9Line 1: §7[shop] §9§oAll other lines are optional.\n
-          §9Line 2: §7Item Name §9or §7auto §9§o(uses chest contents).\n
-          §9Line 3: §7price each §9§oYou can change this later.\n
-          §9Line 4: §7buy §9or §7sell §9You can change this later.\n
-          §0 \n
-          §1§m            §9  §lShop Commands  §1§m            \n
-          §9Aliases: §7/ccshop /shop /shops \n
-          §7/ccshop manage §1- §9Open the shop manager GUI.\n
-          §7/ccshop manage §8<§7ShopID§8> §1- §9Open manager for a single shop.\n
-          §7/ccshop manage §8<§7ShopID§8> <§7open§8|§7close§8> §1- §9Open/close a shop.\n
-          §7/ccshop manage §8<§7ShopID§8> <§7trust§8|§7untrust§8> <§7name§8> §1- §9Allow others to access shop storage.\n
-          §7/ccshop stockcheck §1- §9Check stock for all your shops.\n
-          §1§m                                                                     §1"
-    Manage:
-      openShop: "Your Shop #{ID} is now open."
-      closeShop: "Your Shop #{ID} is now closed."
-      trustSuccess: "{name} is now trusted. They can access shop storage."
-      unTrustSuccess: "{name} is no longer trusted."
-      Chests:
-        pleaseClickChest: "Please RIGHT CLICK on the chest/container you would like to add or remove."
-        confirmChestRemoved: "Chest is no longer linked to your shop."
-        chestLinkedToOtherShop: "§cThat chest is already used by another shop!"
-        confirmChestAdded: "Chest is now linked to your shop."
-        chestFailMax: "§cYour shop already has the maximum number of chests connected."
-        chestFailDistance: "§cThat chest is too far away!"
-      Signs:
-        pleaseClickSign: "Please RIGHT CLICK on the sign you would like to add or remove."
-        confirmSignRemoved: "Sign is no longer linked to your shop."
-        signLinkedToOtherShop: "§cThat chest is already used by another shop!"
-        confirmSignAdded: "Sign is now linked to your shop."
-        signFailMax: "§cYour shop already has the maximum number of signs connected."
-        signFailDistance: "§cThat sign is too far away!"
-    Create:
-      success: "Shop {ID} created. Use §7/ccshop manage {ID} §9to manage your shop!"
+  Commands:
+    General:
+      errorPrefix: '&4ccShop Error » &c'
+      normalPrefix: '&b&lccShop » &9'
       Error:
-        noChest: "Shop {ID} couldn't find a chest! Please link one from the GUI."
-        noItem: "Item type not found - please setup in GUI."
-        itemBlocked: "Sorry, {MATERIAL} is banned from sale."
-
-# Sign formats
-Sign:
-  formats:
-    defaultPlayerFormat:
-    - "&l{owner}'s Shop"
-    - "Click to {buySell}"
-    - "&9&l{mainItem}"
-    - "&c{price}&8/ea"
-    defaultAdminFormat:
-    - "&lServer Shop"
-    - "Click to {buySell}"
-    - "&9&l{mainItem}"
-    - "&c{price}&8/ea"
-    deletedShopFormat:
-    - "&4**"
-    - "&c&lDeleted"
-    - "&c&lShop"
-    - "&4**"
-    closedShopFormat:
-    - "&4**"
-    - "&c&lShop"
-    - "&c&lClosed"
-    - "&4**"
-    removedSignFormat:
-    - "&4**"
-    - "&cRemoved"
-    - "&cShop Sign"
-    - "&4**"
-    limitReachec:
-    - "§4Error:"
-    - "§cShop Limit"
-    - "§cExceeded!"
-  createHeader:
-    player: "[shop]"
-    admin: "[adminshop]"
-    auto: "auto"
-    buy: "buy"
-    sell: "sell"
-
-GUI: #TODO
+        playerOnly: "This command only works for players!"
+        shopIDInvalid: "ShopID must be a number!"
+        shopNotExist: 'Shop #{ID} does not exist!'
+        hasNoShops: "You don't have any shops! Create one by putting &7[shop] &con a sign."
+        playerMissing: "You must enter a player's name."
+        playerNotFound: "Player {name} was not found!"
+        noPermission: "You don't have permission for that!"
+    Player:
+      help: "&b&lHelp\n&1&m            &9  &lCreating Shops  &1&m            \n\
+        &9Create a shop by placing a sign near a chest/barrel/shulker\n\
+        &9Line 1: &7[shop] &9&oAll other lines are optional.\n\
+        &9Line 2: &7Item Name &9or &7auto &9&o(uses chest contents).\n\
+        &9Line 3: &7price each &9&oYou can change this later.\n\
+        &9Line 4: &7buy &9or &7sell &9You can change this later.\n\
+        &0 \n\
+        &1&m            &9  &lShop Commands  &1&m            \n\
+        &9Aliases: &7/ccshop /shop /shops \n\
+        &7/ccshop manage &1- &9Open the shop manager GUI.\n\
+        &7/ccshop manage &8<&7ShopID&8> &1- &9Open manager for a single shop.\n\
+        &7/ccshop manage &8<&7ShopID&8> <&7open&8|&7close&8> &1- &9Open/close a shop.\n\
+        &7/ccshop manage &8<&7ShopID&8> <&7trust&8|&7untrust&8> <&7name&8> &1- &9Allow others to access shop storage.\n\
+        &7/ccshop stockcheck &1- &9Check stock for all your shops.\n\
+        &1&m                                                                     &1"
+      Manage:
+        openShop: "Your Shop #{ID} is now open."
+        closeShop: "Your Shop #{ID} is now closed."
+        trustSuccess: "{name} is now trusted. They can access shop storage."
+        unTrustSuccess: "{name} is no longer trusted."
+        Chests:
+          pleaseClick: "Please RIGHT CLICK on the chest/container you would like to add or remove."
+          confirmRemoved: "Chest is no longer linked to your shop."
+          confirmAdded: "Chest is now linked to your shop."
+          Error:
+            linkedToOtherShop: "&cThat chest is already used by another shop!"
+            maxChests: "&cYour shop already has the maximum number of chests connected."
+            tooFarAway: "&cThat chest is too far away!"
+        Signs:
+          pleaseClick: "Please RIGHT CLICK on the sign you would like to add or remove."
+          confirmRemoved: "Sign is no longer linked to your shop."
+          confirmAdded: "Sign is now linked to your shop."
+          Error:
+            linkedToOtherShop: "&cThat sign is already used by another shop!"
+            maxSigns: "&cYour shop already has the maximum number of signs connected."
+            tooFarAway: "&cThat sign is too far away!"
+      AddItem:
+        itemTypeBanned: "&c{MATERIAL} are banned from sale!"
+      Create:
+        success: "Shop {ID} created. Use &7/ccshop manage {ID} &9to manage your shop!"
+        Error:
+          noChest: "Shop {ID} couldn't find a chest! Please link one from the GUI."
+          noItem: "Item type not found - please setup in GUI."
+          itemBlocked: "Sorry, {MATERIAL} is banned from sale."
+      SetLang:
+        missingArgs: "Invalid Language ID! &7/ccshop setlanguage <langID> \n\
+        &cAvailable Languages are: &6{langs}"
+        success: "Set your language to {lang}."
+    Admin:
+      help: "&b&lAdmin Help \n\
+        &7/ccshopadm reload &8[&7config&8|&7all&8] &1- &9Reload the plugin configs.\n\
+        &9Using '&7all&9' also reloads shop data, you may lose recent changes.\n\
+        &7/ccshopadm setlanguage &8<&7player&8> <&7langID&8> &1- &9Set a player's language.\n\
+        &1&m                                                                     &1"
+      reload: "Reloading all ccShop configs and data..."
+      SetLang:
+        missingArgs: "Invalid syntax &7/ccshopadm setlanguage <name> <langID>\n\
+          &cAvailable Languages are: &6{langs}"
+        success: "Set {player}'s language to {lang}"
+  Notifications:
+    ShopOwner:
+      buyTransaction: "{customer} BOUGHT {quantity} of {itemName}&9 from you for &a{price}."
+      sellTransaction: "{customer} SOLD {quantity} of {itemName} &9to you for &c{price}."
+      outOfStock: "&cYour {itemName} &cis out of stock in shop #{shopID}"
+    Customer:
+      buyTransaction: "You bought {quantity} of {itemName} &9from {shopOwner} for &c{price}"
+      sellTransaction: "You sold {quantity} of {itemName} &9to {shopOwner} for &a{price}"
+      outOfStock: "That item is out of stock!"
+      shopFull: "This shop is full!"
+      notEnoughToSell: "You don't have enough of that item!"
+      notEnoughMoney: "You don't have enough money for that!"
+      inventoryFull: "You don't have enough inventory space!"
+GUIMessages:
+  Gui:
+    Misc:
+      buy: "buy"
+      sell: "sell"
+      stack: "stack"
+      stacks: "stacks"
+    Title:
+      prefix: "&b&a&b&lccShop &b» "
+      playerShop: "&9{owner}""s Shop"
+      PlayerManager:
+        main: "&9Your Shops"
+        single: "&9Managing Shop #{shop}"
+        transactions: "&9Recent Transactions"
+        trusted: "&9Manage Trusted Players"
+        item: "&9Managing Item {item} (#{id})"
+        price: "&9Enter New Price (Current: ${price})"
+        stockCheck: "&9Global Stock Checker"
+      Confirm:
+        deleteShop: "&c&lDelete shop: &4Are you sure?"
+        removeItem: "&c&lRemove Item: &4Are you sure?"
+        removeSign: "&c&lRemove Sign: &4Are you sure?"
+        removeChest: "&c&lRemove Chest: &4Are you sure?"
+        addTrust: "&a&lTrust {name}: &2Are you sure?"
+        removeTrust: "&c&lUn-Trust {name}: &4Are you sure?"
+    Item:
+      General:
+        Close:
+          name: "&cClose"
+          lore: ""
+        PageUp:
+          name: "&9&lNext Page »"
+          lore: "&1Page {current} of {max}"
+        PageDown:
+          name: "&9&l« Last Page"
+          lore: "&1Page {current} of {max}"
+      Manager:
+        OpenStockView:
+          name: "&e&lStock Checker"
+          lore: "&6Click to view the current stock\n\
+            &6for all your shops."
+        Shop:
+          name: "&9&lShop: #{id}"
+          lore: "&9Items:\n\
+            {item_list}"
+        DefaultSignFormat:
+          name: "&9Edit Default Sign Text"
+          lore: "&7Click to change the text\n\
+            &7on &lall new &7shop signs.\n\
+            &8Supports Colours with &\n\
+            &0 &fPlaceholders:\n\
+            &7{pe} &8Price Each\n\
+            &7{ps} &8Price per Stack\n\
+            &7{item} &8Main Item Name\n\
+            &7{owner} &8Owner's Name\n\
+            &7{buySell} &8Main item mode\n\
+            &1---\n\
+            &9Current Format:\n\
+            &f{currentFormat}"
+        ToggleStockMessage:
+          True:
+            name: "&aStock Notifications Enabled"
+            lore: "&2Click to disable messages when your\n\
+              &2shops are out of stock."
+          False:
+            name: "&cStock Notifications Disabled"
+            lore: "&4Click to enable messages when your\n\
+              &2shops are out of stock."
+        ToggleTransMessage:
+          True:
+            name: "&aSale Notifications Enabled"
+            lore: "&2Click to disable messages when your\n\
+              &2shops make a sale."
+          False:
+            name: "&cSale Notifications Disabled"
+            lore: "&4Click to enable messages when your\n\
+              &2shops make a sale."
+      ShopManager:
+        Open:
+          name: "&aShop Open"
+          lore: "&cClick to Close"
+        Closed:
+          name: "&cShop Closed"
+          lore: "&aClick to Open"
+        SignText:
+          name: "&9Edit Sign Text"
+          lore: "&7Click to change the text\n\
+            &7on this shops signs.\n\
+            &8Supports Colours with &\n\
+            &0 &fPlaceholders:\n\
+            &7{pe} &8Price Each\n\
+            &7{ps} &8Price per Stack\n\
+            &7{item} &8Main Item Name\n\
+            &7{owner} &8Owner's Name\n\
+            &7{buySell} &8Main item mode"
+        ToggleSign:
+          name: "&9Add or Remove Sign"
+          lore: "&7Click to link or unlink\n\
+            &7a sign and this shop."
+        ToggleChest:
+          name: "&9Add or Remove Chest"
+          lore: "&7Click to link or unlink\n\
+            &7a container to this shop.\n\
+            &7{current} of {max} linked."
+        AddItem:
+          name: "&9Add New Shop item"
+          nameAtMax: "&cMaximum Items Added"
+          lore: "&7Click to Add a new item\n\
+            &7{current}/{max} items used."
+        ManageTrusted:
+          name: "&9Manage Trusted Players"
+          lore: "&8Click to add/remove friends."
+        OpenStats:
+          name: "&9View Stats"
+          lore: "&7Click to see recent transactions"
+        DeleteShop:
+          name: "&cDelete Shop"
+          lore: "&cClick to remove this shop\n\
+            &7Signs/Chests will stay in the world."
+        ManageItem:
+          name: "&9Item #{id} &1&o({item}&1&o)"
+          lore: "&7Click To Manage\n\
+            &8Buy Price: ${buyPrice}\n\
+            &8Sell Price: ${sellPrice}\n\
+            &8Mode: {buy} {sell}\n\
+            &8Stock: {stock}"
+        Transaction:
+          name: "&b{customer} {buySell} {itemName}"
+          lore: "&9Quantity: {amount}\n\
+            &9Price (Total): {price}\n\
+            &9Date: {date}"
+          bought: "bought"
+          sold: "sold"
+      ConfirmScreen:
+        Confirm:
+          name: "&a&lConfirm"
+          lore: ""
+        Cancel:
+          name: "&c&lCancel"
+          lore: ""
+      ItemManager:
+        ToggleBuy:
+          True:
+            name: "&cClick to disable buying."
+            lore: ""
+          False:
+            name: "&aClick to enable buying."
+            lore: ""
+        ToggleSell:
+          True:
+            name: "&cClick to disable selling."
+            lore: ""
+          False:
+            name: "&aClick to enable selling."
+            lore: ""
+        ToggleMatchData:
+          True:
+            name: "&cClick disable dataMatching."
+            lore: "&4If enabled, forces items to only\n\
+              &4sell if their data matches exactly.\n\
+              &4eg. enchantments, custom name etc."
+          False:
+            name: "&aClick to enable dataMatching."
+            lore: "&4If enabled, forces items to only\n\
+              &4sell if their data matches exactly.\n\
+              &4eg. enchantments, custom name etc."
+        BuyPrice:
+          name: "&9Buy Price: ${price}"
+          lore: "&1Click to change."
+        SellPrice:
+          name: "&9Sell Price: ${price}"
+          lore: "&1Click to change."
+        Stats:
+          name: "&9Item Stats"
+          lore: "&9Last known stock: &b{stock}\n\
+            &9Total Sold: &b{sold}\n\
+            &9Total Bought: &b{bought}"
+        Sample:
+          name: "&9Item Type: &b{name}"
+          lore: "&1Drag item here to change.\n\
+            &0 \n\
+            {lore}"
+        DeleteItem:
+          name: "&cRemove this Item."
+          lore: "&cClick to remove this item from the shop.\n\
+            &cThis cannot be undone."
+      CustomerGUI:
+        SelectBuy:
+          name: "&9Buy &1» &b{item}"
+          lore: "&e{priceE} &6each\n\
+            &e{priceS} &6/stack"
+        SelectSell:
+          name: "&3Sell &1» &b{item}"
+          lore: "&e{priceE} &6each\n\
+            &e{priceS} &6/stack"
+        Buy:
+          Normal:
+            name: "&9Buy {amount} &1» &b{item}"
+            lore: "&e${price} &6for {amount}"
+          CantAfford:
+            name: "&4Insufficient Funds! &c:("
+            lore: "&e${price} &6for {amount} of &b{item}"
+          NoStock:
+            name: "&4Out Of Stock &c:("
+            lore: "&e${price} &6for {amount} of &b{item}"
+        Sell:
+          Normal:
+            name: "&9Sell {amount} &1» &b{item}"
+            lore: "&e${price} &6for {amount}"
+          NoStock:
+            name: "&4Not Enough Items! &c:("
+            lore: "&e${price} &6for {amount} of &b{item}"
+          ShopFull:
+            name: "&4Shop is Full! &c:("
+            lore: "&e${price} &6for {amount} of &b{item}"
+          CantAfford:
+            name: "&4{owner} can""t afford this! &c:("
+            lore: "&e${price} &6for {amount} of &b{item}"
+        Balance:
+          name: "&6Your Balance: &e${balance}"
+          lore: "&9Don""t spend it all at once!"
+      TrustManager:
+        AddTrust:
+          name: "&bAdd a trusted player"
+          lore: "&9Allows others to access\n\
+            &9this shop's storage."
+        TrustedPlayer:
+          name: "&b{name} &9is trusted"
+          lore: "&9Click to remove trust."
+      StockCheck:
+        Stats:
+          lore: "&9Last known stock: &b{stock}\n\
+            &9Total Sold: &b{sold}\n\
+            &9Total Bought: &b{bought}\n\
+            &9{buySell}\n\
+            &9Shop #{shopID}"
