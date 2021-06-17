@@ -157,7 +157,7 @@ GUIMessages:
           False:
             name: "&cStock Notifications Disabled"
             lore: "&4Click to enable messages when your\n\
-              &2shops are out of stock."
+              &4shops are out of stock."
         ToggleTransMessage:
           True:
             name: "&aSale Notifications Enabled"
@@ -166,7 +166,7 @@ GUIMessages:
           False:
             name: "&cSale Notifications Disabled"
             lore: "&4Click to enable messages when your\n\
-              &2shops make a sale."
+              &4shops make a sale."
       ShopManager:
         Open:
           name: "&aShop Open"
