@@ -2,7 +2,7 @@
 ### Modern Sign / Chest based player shops. GUI based. 
 ccShop is a **premium** Spigot/Paper plugin that adds player shops. The shops require in-world storage (ie chest, barrel) and a sign, with GUI-menus for buying/selling and managing the shop that open from the sign.
 
-Spigot and Paper **1.14 to 1.16** are supported.
+Spigot and Paper **1.14 to 1.17** are supported. Only **Java 16** is supported.
 
 ## Links:
 - [Buy on Spigot](#)
