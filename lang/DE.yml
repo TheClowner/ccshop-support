@@ -158,7 +158,7 @@ GUIMessages:
             name: '&cBestand Benachrichtigungen deaktiviert'
             lore: |-
               &4Klicke um die Benachrichtigungen zu aktivieren
-              &2wenn deine Shops leer sind.
+              &4wenn deine Shops leer sind.
         ToggleTransMessage:
           'Trü':
             name: '&aVerkaufs Benachrichtigungen aktiviert'
@@ -169,7 +169,7 @@ GUIMessages:
             name: '&cVerkaufs Benachrichtigungen deaktiviert'
             lore: |-
               &4Klicke um die Benachrichtigungen zu aktivieren
-              &2wenn jemand etwas an deinem Shop kauft.
+              &4wenn jemand etwas an deinem Shop kauft.
       ShopManager:
         Open:
           name: '&aShop geöffnet'
