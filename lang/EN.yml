@@ -1,5 +1,5 @@
 # ccShop Default English Language File
-confVersion: 2
+confVersion: 4
 
 ChatMessages:
   Clickable:
@@ -54,6 +54,9 @@ ChatMessages:
             linkedToOtherShop: "&cThat sign is already used by another shop!"
             maxSigns: "&cYour shop already has the maximum number of signs connected."
             tooFarAway: "&cThat sign is too far away!"
+        Preview:
+          Error:
+            notLoaded: "&cShop must be in a loaded chunk to preview! Please go to your shop."
       AddItem:
         itemTypeBanned: "&c{MATERIAL} are banned from sale!"
       Create:
@@ -99,7 +102,8 @@ GUIMessages:
       stacks: "stacks"
     Title:
       prefix: "&b&a&b&lccShop &b» "
-      playerShop: "&9{owner}""s Shop"
+      playerShop: "&9{owner}'s Shop"
+      adminShop: "&c&lServer Shop"
       PlayerManager:
         main: "&9Your Shops"
         single: "&9Managing Shop #{shop}"
@@ -115,6 +119,18 @@ GUIMessages:
         removeChest: "&c&lRemove Chest: &4Are you sure?"
         addTrust: "&a&lTrust {name}: &2Are you sure?"
         removeTrust: "&c&lUn-Trust {name}: &4Are you sure?"
+      AdminManager:
+        main: "&9All AdminShops"
+        single: "&9Managing AdminShop #{shop}"
+        tramsactoions: "&9Recent Transactions"
+        item: "&9Managing Item {item} (#{id})"
+        price: "&9Enter New Price (Current: ${price})"
+        BuyCap:
+          amount: "&9Enter New Buy Cap (Current: {items})"
+          time: "&9Enter new delay, in seconds (Current: {time}s)"
+        SellCap:
+          amount: "&9Enter New Sell Cap (Current: {items})"
+          time: "&9Enter new delay, in seconds (Current: {time}s)"
     Item:
       General:
         Close:
@@ -223,6 +239,9 @@ GUIMessages:
             &9Date: {date}"
           bought: "bought"
           sold: "sold"
+        PreviewShop:
+          name: "&bPreview Shop"
+          lore: "&9View your shop\n&9like a customer."
       ConfirmScreen:
         Confirm:
           name: "&a&lConfirm"
@@ -276,6 +295,33 @@ GUIMessages:
           name: "&cRemove this Item."
           lore: "&cClick to remove this item from the shop.\n\
             &cThis cannot be undone."
+        BuyCap:
+          Amount:
+            name: "&bChange &lBuy &bCap Amount"
+            lore: "&9Current limit is:\n
+                  &b{amount} items\n
+                  &b({amountStacks} stacks)"
+          Time:
+            name: "&bChange &lBuy &bCap Time"
+            lore: "&9Current delay is\n
+                  &b{timeSeconds} seconds"
+        SellCap:
+          Amount:
+            name: "&bChange &lSell &bCap Amount"
+            lore: "&9Current limit is:\n
+                  &b{amount} items\n
+                  &b({amountStacks} stacks)"
+          Time:
+            name: "&bChange &lSell &bCap Time"
+            lore: "&9Current delay is\n
+                  &b{timeSeconds} seconds"
+      AdminManager:
+        ManageItem:
+          name: "&9Item #{id} &1&o({item}&1&o)"
+          lore: "&7Click To Manage\n&8Buy Price: ${buyPrice}\n&8Sell Price: ${sellPrice}\n&8Mode: {buy} {sell}"
+        Stats:
+          name: "&9Item Stats"
+          lore: "&9Total Sold: &b{sold}\n&9Total Bought: &b{bought}"
       CustomerGUI:
         SelectBuy:
           name: "&9Buy &1» &b{item}"
@@ -295,6 +341,10 @@ GUIMessages:
           NoStock:
             name: "&4Out Of Stock &c:("
             lore: "&e${price} &6for {amount} of &b{item}"
+          AboveCap:
+            name: "&4Reached daily buy limit!"
+            lore: "&cYou can buy more in {capTime}!\n
+                  &e${price} &6for {amount} of &b{item}"
         Sell:
           Normal:
             name: "&9Sell {amount} &1» &b{item}"
@@ -308,6 +358,10 @@ GUIMessages:
           CantAfford:
             name: "&4{owner} can""t afford this! &c:("
             lore: "&e${price} &6for {amount} of &b{item}"
+          AboveCap:
+            name: "&4Above daily sell limit!"
+              lore: "&cYou can sell more in {capTime}!\n
+                    &e${price} &6for {amount} of &b{item}"
         Balance:
           name: "&6Your Balance: &e${balance}"
           lore: "&9Don""t spend it all at once!"
@@ -326,3 +380,14 @@ GUIMessages:
             &9Total Bought: &b{bought}\n\
             &9{buySell}\n\
             &9Shop #{shopID}"
+MiscMessages:
+  General:
+    Time:
+      day: "day"
+      days: "days"
+      hour: "hour"
+      hours: "hours"
+      minute: "minute"
+      minutes: "minutes"
+      second: "second"
+      seconds: "seconds"
