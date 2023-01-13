@@ -1,13 +1,14 @@
-confVersion: 2
+#German Translation by OfficialPlocki
+confVersion: 3
 ChatMessages:
   Clickable:
-    addTrusted: '&a» &nKlicke hier und gebe danach den Spieler Namen dem du Vertraün willst ein. &a«'
+    addTrusted: '&a» &nKlicke hier und gebe danach den Spieler Namen dem du Vertrauen willst ein. &a«'
   Commands:
     General:
       errorPrefix: '&4Shop Fehler » &c'
       normalPrefix: '&b&lShop » &9'
       Error:
-        playerOnly: Nur Spieler können diesen Befehl ausführen.
+        playerOnly: Nur Spieler koennen diesen Befehl ausfuehren.
         shopIDInvalid: Die ShopID muss eine Nummer sein!
         shopNotExist: 'Shop #{ID} existiert nicht!'
         hasNoShops: Du hast keine Shops! erstelle einen indem du &7[shop] &cauf ein Schild schreibst.
@@ -16,75 +17,78 @@ ChatMessages:
         noPermission: Du hast dazu keine Rechte.
     Player:
       help: "&b&lHilfe\n&1&m            &9  &lShop erstellen  &1&m            \n&9Erstelle\
-        \ einen Shop indem du ein Schild in die nähe eine/s/r Kiste/Fass/Shulker stellst.\n&91. Zeile: &7[shop]\
+        \ einen Shop indem du ein Schild in die naehe eine/s/r Kiste/Fass/Shulker stellst.\n&91. Zeile: &7[shop]\
         \ &9&cAlle anderen Zeilen sind optional.\n&92. Zeile: &7Item Name &9oder &7auto &9&o(benutzt\
-        \ Kisten Inhalt).\n&93. Zeile: &7Preis jedes &9&oDu kannst dies danach ändern. \n\
-        &94. Zeile: &7buy &9oder &7sell &9Du kannst dies danach ändern.\n&0 \n&1&m      \
+        \ Kisten Inhalt).\n&93. Zeile: &7Preis jedes &9&oDu kannst dies danach aendern. \n\
+        &94. Zeile: &7buy &9oder &7sell &9Du kannst dies danach aendern.\n&0 \n&1&m      \
         \      &9  &lShop Befehle  &1&m            \n&9Aliases: &7/ccshop /shop /shops\
-        \ \n&7/ccshop manage &1- &9öffne das Shop Manager GUI.\n&7/ccshop manage &8<&7ShopID&8>\
-        \ &1- &9öffne das Shop Manager GUI für einen bestimmten Shop.\n&7/ccshop manage &8<&7ShopID&8> <&7open&8|&7close&8>\
-        \ &1- &9öffne/Schliesse einen Shop.\n&7/ccshop manage &8<&7ShopID&8> <&7trust&8|&7untrust&8>\
-        \ <&7name&8> &1- &9Erlaube anderen Spielern deinen Shop Lager zu öffnen.\n&7/ccshop stockcheck\
-        \ &1- &9Prüfe alle Shop Lager.\n&1&m                            \
+        \ \n&7/ccshop manage &1- &9Oeffne das Shop Manager GUI.\n&7/ccshop manage &8<&7ShopID&8>\
+        \ &1- &9Oeffne das Shop Manager GUI fuer einen bestimmten Shop.\n&7/ccshop manage &8<&7ShopID&8> <&7open&8|&7close&8>\
+        \ &1- &9Oeffne/Schliesse einen Shop.\n&7/ccshop manage &8<&7ShopID&8> <&7trust&8|&7untrust&8>\
+        \ <&7name&8> &1- &9Erlaube anderen Spielern deinen Shop Lager zu Oeffnen.\n&7/ccshop Bestandcheck\
+        \ &1- &9Pruefe alle Shop Lager.\n&1&m                            \
         \                                         &1"
       Manage:
-        openShop: 'Dein Shop #{ID} ist nun geöffnet.'
+        openShop: 'Dein Shop #{ID} ist nun geoeffnet.'
         closeShop: 'Dein Shop #{ID} ist nun geschlossen.'
         trustSuccess: '{name} ist nun vertraut. Dieser kann nun auf das Shop Lager zugreifen.'
         unTrustSuccess: '{name} ist nun nicht mehr vertraut.'
         Chests:
-          pleaseClick: Bitte Rechtsklicke auf die Kiste die du hinzufügen oder entfernen willst.
-          confirmRemoved: Die Kiste gehört nun nicht mehr zu deinem Shop.
-          confirmAdded: Die Kiste gehört nun zu deinem Shop.
+          pleaseClick: Bitte Rechtsklicke auf die Kiste die du hinzufuegen oder entfernen willst.
+          confirmRemoved: Die Kiste gehoert nun nicht mehr zu deinem Shop.
+          confirmAdded: Die Kiste gehoert nun zu deinem Shop.
           Error:
             linkedToOtherShop: '&cDiese Kiste wird bereits von einem anderen Shop benutzt!'
             maxChests: '&cDein Shop hat bereits die maximale Anzahl von Kisten erreicht.'
             tooFarAway: '&cDiese Kiste ist zu weit entfernt!'
         Signs:
-          pleaseClick: Bitte Rechtsklicke auf das Schild das du hinzufügen oder entfernen willst.
-          confirmRemoved: Das Schild gehört nun nicht mehr zu deinem Shop.
-          confirmAdded: Das Schild gehört nun zu deinem Shop.
+          pleaseClick: Bitte Rechtsklicke auf das Schild das du hinzufuegen oder entfernen willst.
+          confirmRemoved: Das Schild gehoert nun nicht mehr zu deinem Shop.
+          confirmAdded: Das Schild gehoert nun zu deinem Shop.
           Error:
             linkedToOtherShop: '&cDieses Schild wird bereits von einem anderen Shop verwendet!'
             maxSigns: '&cDer Shop hat bereits die maximale Anzahl an Schildern verbunden.'
             tooFarAway: '&cDieses Schild ist zu weit entfernt!'
+        Preview:
+          Error:
+            notLoaded: "&cDer Shop muss sich in einem geladenen Block befinden, um eine Vorschau anzeigen zu können! Bitte gehen Sie zu Ihrem Geschäft."
       AddItem:
         itemTypeBanned: '&c{MATERIAL} darf nicht verkauft werden!'
       Create:
         success: Shop {ID} wurde erstellt. Benutze &7/ccshop manage {ID} &9um deinen Shop zu verwelten!
         Error:
-          noChest: Shop {ID} konnte keine Kiste finden. Bitte verbinde eine Kiste über das GUI.
-          noItem: Item wurde nicht gefunden. Bitte füge ein Item über das GUI hinzu.
+          noChest: Shop {ID} konnte keine Kiste finden. Bitte verbinde eine Kiste ueber das GUI.
+          noItem: Item wurde nicht gefunden. Bitte fuege ein Item ueber das GUI hinzu.
           itemBlocked: Entschuldigung, {MATERIAL} darf nicht verkauft werden.
       SetLang:
-        missingArgs: "Ungülige Sprache! &7/ccshop setlanguage <langID> \n&cVerfügbare\
+        missingArgs: "Unguelige Sprache! &7/ccshop setlanguage <langID> \n&cVerfuegbare\
           \ Sprachen sind: &6{langs}"
         success: Die Sprache wurde auf {lang} gesetzt.
     Admin:
       help: |-
         &b&lAdmin Hilfe
-        &7/ccshopadm reload &8[&7config&8|&7all&8] &1- &9Lädt die Konfiguration neu.
-        &9Benutze '&7all&9' um die Shop Daten neuzuladen. Es können änderungen verloren gehen!
-        &7/ccshopadm setlanguage &8<&7player&8> <&7langID&8> &1- &9Setze die Sprache für einen Spieler.
+        &7/ccshopadm reload &8[&7config&8|&7all&8] &1- &9Laedt die Konfiguration neu.
+        &9Benutze '&7all&9' um die Shop Daten neuzuladen. Es koennen aenderungen verloren gehen!
+        &7/ccshopadm setlanguage &8<&7player&8> <&7langID&8> &1- &9Setze die Sprache fuer einen Spieler.
         &1&m                                                                     &1
       reload: Lade alle ccShop Konfigurationen und Shops neu...
       SetLang:
         missingArgs: |-
-          Ungültiger Syntax &7/ccshopadm setlanguage <name> <langID>
-          &cVerfügbare Sprachen sind: &6{langs}
+          Ungueltiger Syntax &7/ccshopadm setlanguage <name> <langID>
+          &cVerfuegbare Sprachen sind: &6{langs}
         success: Die Sprache von {player} wurde auf {lang} gesetzt.
   Notifications:
     ShopOwner:
-      buyTransaction: '{customer} kaufte {quantity} von {itemName} von dir für &a{price}.'
-      sellTransaction: '{customer} verkaufte {quantity} von {itemName} an dich für &c{price}.'
-      outOfStock: '&cDas Item {itemName} ist in deinem Shop #{shopID} nicht mehr verfügbar.'
+      buyTransaction: '{customer} kaufte {quantity} von {itemName} von dir fuer &a{price}.'
+      sellTransaction: '{customer} verkaufte {quantity} von {itemName} an dich fuer &c{price}.'
+      outOfBestand: '&cDas Item {itemName} ist in deinem Shop #{shopID} nicht mehr verfuegbar.'
     Customer:
-      buyTransaction: Du hast {quantity} {itemName} von {shopOwner} für &c{price} gekauft
-      sellTransaction: Du hast {quantity} {itemName} von {shopOwner} für &a{price} verkauft
-      outOfStock: Dieses Item ist nicht mehr verfügbar!
+      buyTransaction: Du hast {quantity} {itemName} von {shopOwner} fuer &c{price} gekauft
+      sellTransaction: Du hast {quantity} {itemName} von {shopOwner} fuer &a{price} verkauft
+      outOfBestand: Dieses Item ist nicht mehr verfuegbar!
       shopFull: Der Shop ist voll!
-      notEnoughToSell: Du hast nicht genügend Items in deinem Inventar!
-      notEnoughMoney: Du hast nicht genügend Geld!
+      notEnoughToSell: Du hast nicht genuegend Items in deinem Inventar!
+      notEnoughMoney: Du hast nicht genuegend Geld!
       inventoryFull: Dein Inventar ist voll!
 GUIMessages:
   Gui:
@@ -102,32 +106,32 @@ GUIMessages:
         transactions: '&9Letzte Transaktionen'
         trusted: '&9Verwalte vertraute Spieler'
         item: '&Verwalte Item {item} (#{id})'
-        price: '&9Gebe den neün Preis ein (Aktüll: ${price})'
-        stockCheck: '&9Globaler Bestand Checker'
+        price: '&9Gebe den neuen Preis ein (Aktuell: ${price})'
+        BestandCheck: '&9Globaler Bestand Checker'
       Confirm:
         deleteShop: '&c&lEntferne Shop: &4Bist du dir sicher?'
         removeItem: '&c&lEntferne Item: &4Bist du dir sicher?'
         removeSign: '&c&lEntferne Schild: &4Bist du dir sicher?'
         removeChest: '&c&lEntferne Kiste: &4Bist du dir sicher?'
-        addTrust: '&a&l{name} Vertraün: &2Bist du dir sicher?'
-        removeTrust: '&c&l{name} nicht mehr Vertraün: &4Bist du dir sicher?'
+        addTrust: '&a&l{name} Vertrauen: &2Bist du dir sicher?'
+        removeTrust: '&c&l{name} nicht mehr Vertrauen: &4Bist du dir sicher?'
     Item:
       General:
         Close:
           name: '&cSchliessen'
           lore: ''
         PageUp:
-          name: '&9&lNächste Seite »'
+          name: '&9&lNaechste Seite »'
           lore: '&1Seite {current} von {max}'
         PageDown:
           name: '&9&l« Letzte Seite'
           lore: '&1Seite {current} von {max}'
       Manager:
-        OpenStockView:
+        OpenBestandView:
           name: '&e&lBestand Checker'
           lore: |-
-            &6Klicke um den aktüllen Bestand
-            &6für alle deine Shops anzusehen.
+            &6Klicke um den aktuellen Bestand
+            &6fuer alle deine Shops anzusehen.
         Shop:
           name: '&9&lShop: #{id}'
           lore: |-
@@ -136,20 +140,20 @@ GUIMessages:
         DefaultSignFormat:
           name: '&9Standard Schild Text Editieren'
           lore: |-
-            &7Klicke um den Text zu ändern
+            &7Klicke um den Text zu aendern
             &7on &lall new &7shop signs.
-            &8Farben mit & werden unterstützt
+            &8Farben mit & werden unterstuetzt
             &0 &fPlatzhalter:
-            &7{pe} &8Preis pro Stück
+            &7{pe} &8Preis pro Stueck
             &7{ps} &8Preis pro Stack
             &7{item} &8Item Name
             &7{owner} &8Shop Inhaber
             &7{buySell} &8Shop Modus
             &1---
-            &9Aktülles Format:
+            &9Aktuelles Format:
             &f{currentFormat}
         ToggleStockMessage:
-          'Trü':
+          'True':
             name: '&aBestand Benachrichtigungen aktiviert'
             lore: |-
               &2Klicke um die Benachrichtigungen zu deaktivieren
@@ -160,7 +164,7 @@ GUIMessages:
               &4Klicke um die Benachrichtigungen zu aktivieren
               &4wenn deine Shops leer sind.
         ToggleTransMessage:
-          'Trü':
+          'True':
             name: '&aVerkaufs Benachrichtigungen aktiviert'
             lore: |-
               &2Klicke um die Benachrichtigungen zu deaktivieren
@@ -172,51 +176,51 @@ GUIMessages:
               &4wenn jemand etwas an deinem Shop kauft.
       ShopManager:
         Open:
-          name: '&aShop geöffnet'
+          name: '&aShop geoeffnet'
           lore: '&cKlicke zum Schliessen'
         Closed:
           name: '&cShop geschlossen'
-          lore: '&aKlicke zum öffnen'
+          lore: '&aKlicke zum Oeffnen'
         SignText:
           name: '&9Schild Text Editieren'
           lore: |-
-            &7Klicke um den Text zu ändern
+            &7Klicke um den Text zu aendern
             &7on &lall new &7shop signs.
-            &8Farben mit & werden unterstützt
+            &8Farben mit & werden unterstuetzt
             &0 &fPlatzhalter:
-            &7{pe} &8Preis pro Stück
+            &7{pe} &8Preis pro Stueck
             &7{ps} &8Preis pro Stack
             &7{item} &8Item Name
             &7{owner} &8Shop Inhaber
             &7{buySell} &8Shop Modus
         ToggleSign:
-          name: '&Schild hinzufügen/entfernen'
+          name: '&Schild hinzufuegen/entfernen'
           lore: |-
             &7Klicke um ein Schild mit/von dem Shop
             &7zu Verbinden/entfernen.
         ToggleChest:
-          name: '&9Kiste hinzufügen/entfernen'
+          name: '&9Kiste hinzufuegen/entfernen'
           lore: |-
             &7Klicke um eine Kiste mit/von dem Shop
             &7zu Verbinden/entfernen.
             &7{current} von {max} verbunden.
         AddItem:
-          name: '&9Neüs Shop Item hinzufügen'
+          name: '&9Neues Shop Item hinzufuegen'
           nameAtMax: '&cMaximales Item Limit erreicht'
           lore: |-
-            &7Klicke um ein neüs Item hinzuzufügen
+            &7Klicke um ein neues Item hinzuzufuegen
             &7{current}/{max} Items benutzt.
         ManageTrusted:
           name: '&9Vertraute Spieler Verwalten'
-          lore: '&8Klicke um einen Spieler (nicht länger) zu Vertraün.'
+          lore: '&8Klicke um einen Spieler (nicht laenger) zu Vertrauen.'
         OpenStats:
           name: '&9Stats anzeigen'
           lore: '&7Klicke um die letzten Transaktionen zu sehen.'
         DeleteShop:
-          name: '&cShop Löschen'
+          name: '&cSchop Loeschen'
           lore: |-
             &cKlicke um den Shop zu entfernen.
-            &7Schilder/Kisten bleiben bestehend.
+            &7Sschilder/Kisten bleiben bestehend.
         ManageItem:
           name: '&9Item #{id} &1&o({item}&1&o)'
           lore: |-
@@ -233,47 +237,50 @@ GUIMessages:
             &9Datum: {date}
           bought: gekauft
           sold: verkauft
+        PreviewShop:
+          name: "&bVorschau Shop"
+          lore: "&9Sehen Sie sich Ihren Shop \n&9an, als wären Sie ein Kunde."
       ConfirmScreen:
         Confirm:
-          name: '&a&lBestätigen'
+          name: '&a&lBestaetigen'
           lore: ''
         Cancel:
           name: '&c&lAbbrechen'
           lore: ''
       ItemManager:
         ToggleBuy:
-          'Trü':
+          'True':
             name: '&cKlicke um das Kaufen zu deaktivieren.'
             lore: ''
           'False':
             name: '&aKlicke um das Kaufen zu aktivieren.'
             lore: ''
         ToggleSell:
-          'Trü':
+          'True':
             name: '&cKlicke um das Verkaufen zu deaktivieren.'
             lore: ''
           'False':
             name: '&aKlicke um das Verkaufen zu aktivieren.'
             lore: ''
         ToggleMatchData:
-          'Trü':
+          'True':
             name: '&cKlicke um den Datenabgleich zu deaktivieren.'
             lore: |-
-              &4Wenn es aktiviert ist, können
+              &4Wenn es aktiviert ist, koennen
               &4nur Items verkauft werden, die dem
               &4Shop Item gleichen (Verzauberung, Name, ...).
           'False':
             name: '&aKlicke um den Datenabgleich zu aktivieren.'
             lore: |-
-              &4Wenn es aktiviert ist, können
+              &4Wenn es aktiviert ist, koennen
               &4nur Items verkauft werden, die dem
               &4Shop Item gleichen (Verzauberung, Name, ...).
         BuyPrice:
           name: '&9Kauf Preis: ${price}'
-          lore: '&1Klicke zum ändern.'
+          lore: '&1Klicke zum aendern.'
         SellPrice:
           name: '&9Verkaufs Preis: ${price}'
-          lore: '&1Klicke zum ändern.'
+          lore: '&1Klicke zum aendern.'
         Stats:
           name: '&9Item Stats'
           lore: |-
@@ -283,14 +290,14 @@ GUIMessages:
         Sample:
           name: '&9Item Typ: &b{name}'
           lore: |-
-            &1Ziehe das Item hierher, um es zu ändern.
+            &1Ziehe das Item hierher, um es zu aendern.
 
             {lore}
         DeleteItem:
           name: '&cEntferne das Item.'
           lore: |-
             &cKlicke um das Item vom Shop zu entfernen.
-            &cDies ist entgültig.
+            &cDies ist entgueltig.
       CustomerGUI:
         SelectBuy:
           name: '&9Kauf &1» &b{item}'
@@ -305,39 +312,39 @@ GUIMessages:
         Buy:
           Normal:
             name: '&9Kauf {amount} &1» &b{item}'
-            lore: '&e${price} &6für {amount}'
+            lore: '&e${price} &6fuer {amount}'
           CantAfford:
             name: '&4Du hast zu wenig Geld! &c:('
-            lore: '&e${price} &6für {amount} von &b{item}'
-          NoStock:
+            lore: '&e${price} &6fuer {amount} von &b{item}'
+          NoBestand:
             name: '&4Bestand nicht ausreichend &c:('
-            lore: '&e${price} &6für {amount} von &b{item}'
+            lore: '&e${price} &6fuer {amount} von &b{item}'
         Sell:
           Normal:
             name: '&9Verkauf {amount} &1» &b{item}'
-            lore: '&e${price} &6für {amount}'
-          NoStock:
-            name: '&4Nicht genügend Items! &c:('
-            lore: '&e${price} &6für {amount} von &b{item}'
+            lore: '&e${price} &6fuer {amount}'
+          NoBestand:
+            name: '&4Nicht genuegend Items! &c:('
+            lore: '&e${price} &6fuer {amount} von &b{item}'
           ShopFull:
             name: '&4Der Shop ist voll! &c:('
-            lore: '&e${price} &6für {amount} von &b{item}'
+            lore: '&e${price} &6fuer {amount} von &b{item}'
           CantAfford:
-            name: '&4{owner} hat nicht genügend Geld! &c:('
-            lore: '&e${price} &6für {amount} von &b{item}'
+            name: '&4{owner} hat nicht genuegend Geld! &c:('
+            lore: '&e${price} &6fuer {amount} von &b{item}'
         Balance:
           name: '&6Dein Kontostand: &e${balance}'
           lore: '&9Gib nicht alles auf einmal aus!'
       TrustManager:
         AddTrust:
-          name: '&bVertrauten Spieler hinzufügen'
+          name: '&bVertrauten Spieler hinzufuegen'
           lore: |-
             &9Erlaubt anderen Spielern auf
             &9dein Shop Lager zuzugreifen.
         TrustedPlayer:
           name: '&b{name} &9ist vertraut.'
-          lore: '&9Klicke um dem Spieler nicht mehr zu Vertraün.'
-      StockCheck:
+          lore: '&9Klicke um dem Spieler nicht mehr zu Vertrauen.'
+      BestandCheck:
         Stats:
           lore: |-
             &9Letzter bekannter Bestand: &b{stock}
