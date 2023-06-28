@@ -1,17 +1,18 @@
-# ccShop - Modern Player / Admin Shops 
-### Modern Sign / Chest based Player and Admin shops. GUI based. 
-ccShop is a **premium** Spigot/Paper plugin that adds player shops. The shops require in-world storage (ie chest, barrel) and a sign, with GUI-menus for buying/selling and managing the shop that open from the sign.
+# ccShop - Modern Player Shops 
+### Modern Sign / Chest based player and admin shops. GUI based. 
+ccShop is a **premium** Spigot/Paper plugin that adds player and admin shops.   
 
-Spigot and Paper **1.14 to 1.20** are supported. Only **Java 16** is supported.
+Player shops require in-world storage (ie chest, barrel) and a sign, with GUI-menus for buying/selling and managing the shop that open from the sign.
+
+Spigot and Paper **1.14 to 1.20** are supported.
 
 ## Links:
-- [Buy on Spigot](#)
-- [Buy on MCMarket](#)
+- [Buy on Spigot](https://www.spigotmc.org/resources/ccshop-%C2%BB-modern-gui-chest-shops-%C2%BB-1-14-x-1-16-x-%C2%BB-launch-sale-%C2%AB.91044/)
+- [Buy on MCMarket](https://www.mc-market.org/resources/19596/)
 - [Join the Support Discord Server](https://discord.gg/zy3MaPq)
 - [Issue Tracker](https://github.com/TheClowner/ccshop-support/issues)
 
 ## Setup / Wiki Pages
-- [Wiki Home](https://github.com/TheClowner/ccshop-support/wiki)
 - [**Installation / Getting Started**](https://github.com/TheClowner/ccshop-support/wiki/Getting-Started)
 - [Commands and Permissions](https://github.com/TheClowner/ccshop-support/wiki/Commands-Permissions)
 - [Shop Limits](https://github.com/TheClowner/ccshop-support/wiki/Limits)
@@ -26,12 +27,24 @@ Setting up a shop is as simple as placing a sign near a container.
 Sign Format:   
 > **Line 1:** `[shop]`   
 > *optional* **Line 2:** Item Name or `auto`   
-> *optional* **Line 3:** Item Price - the price for **each** item.   
-> *optional* **Line 4:** `buy` or `sell` - whether this is a buy or sell shop   
+> *optional* **Line 3:** Item Price - the price for **each** item   
+> *optional* **Line 4:** `buy` and/or `sell` - whether this is a buy or sell shop   
+>    
 > `auto` as an item name will add the items found in the shops storage.   
+> To set a different buy and sell price, use the format `b[buyPrice] s[sellPrice]`.   
 > The first line is required, but all other options can be set in the GUI instead.    
 
-Right clicking on the sign will open a Shop manager GUI, which allows you to change some of the shop settings, as well as open it to allow customers to use it.
+Example:
+> [shop]   
+> COAL   
+> b19.99 s10   
+> buy sell   
+
+> This sets up a shop which will let people buy coal for $19.99 and sell it back to you for $10.   
+
+Right clicking on the sign will open a Shop manager GUI, which allows you to change some of the shop settings, as well as open it to allow customers to use it.    
+
+For Admin shops, use `[adminshop]` on the first line. Shift + Right Click opens the GUI.   
 
 ## Plugin Features:
 ### General:
@@ -111,3 +124,8 @@ You can customise limits on a number of shop features:
   - The maximum distance a container or sign can be from the first shop sign. (default 16 blocks)
   - The number of items per shop (default 5)
   - The number of shops each player can create (default unlimited)
+
+- **Admin Shop Buy and Sell Caps**    
+You can limit how many of a given item a player can buy/sell at an admin shop:
+  - Individual caps are set per-item in the admin shop GUI
+  - Caps can be timed, or infinite (use -1 for caps that never expire)
