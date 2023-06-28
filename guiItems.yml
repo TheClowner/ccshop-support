@@ -1,5 +1,5 @@
 # Please do not change. Used to update configs in future versions.
-confVersion: 1
+confVersion: 2
 
 ##########################################################
 # PLEASE NOTE: Item names and lore are set per language. #
@@ -49,6 +49,7 @@ PlayerShop:
       manageTrusted: PLAYER_HEAD
       openStats: PAPER
       deleteShop: REDSTONE_BLOCK
+      previewShop: WRITTEN_BOOK
     # Single Item Manager
     Item:
       toggleFalse: REDSTONE
@@ -60,3 +61,15 @@ PlayerShop:
     # Trusted Player Manager
     Trust:
       addTrusted: NETHER_STAR
+
+  # Admin Shop GUIs
+AdminShop:
+  Manager:
+    # Single Item Manager
+    Item:
+      BuyCap:
+        amount: DIAMOND_HELMET
+        time: CLOCK
+      SellCap:
+        amount: LEATHER_HELMET
+        time: CLOCK
