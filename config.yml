@@ -1,5 +1,5 @@
 # Please do not touch, used for updating configs.
-confVersion: 1
+confVersion: 3
 
 ########################
 #   General Settings   #
@@ -8,7 +8,7 @@ General:
   # Enables extra debug messages
   debugMode: false
 
-  # How often should ccShop save it's data, in ticks.
+  # How often should ccShop save its data, in ticks.
   # Default is 3600 ticks (3 minutes)
   saveInterval: 3600
 
@@ -27,7 +27,25 @@ PlayerShops:
 ########################
 # Admin Shop Settings  #
 ########################
-# Admin shops are not yet implemented.
-# This section is a placeholder.
-AdminShops: {}
+# Controls the AdminShops feature
+# Most settings are set per-shop, through the GUI
+AdminShops:
+  # Enable / Disable Admin Shops
+  enable: true
+
+  # How many transaction logs should we save
+  transactionLogSize: 32
+
+  # Default Settings for buy and sell caps on admin shops
+  # Can be overridden on a per-shop basis
+  Caps:
+    defaultTimes:
+      # default 86400 seconds (24 hours)
+      # -1 means caps never expire
+      buy: 86400
+      sell: 86400
+    defaultCaps:
+      # -1 means no cap
+      buy: -1
+      sell: -1
 
