@@ -360,7 +360,7 @@ GUIMessages:
             lore: "&e${price} &6for {amount} of &b{item}"
           AboveCap:
             name: "&4Above daily sell limit!"
-              lore: "&cYou can sell more in {capTime}!\n
+            lore: "&cYou can sell more in {capTime}!\n
                     &e${price} &6for {amount} of &b{item}"
         Balance:
           name: "&6Your Balance: &e${balance}"
